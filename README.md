@@ -5,9 +5,7 @@ GPU HW IP Design and Verification Engineer Intern
 
 This repository contains the implementation of a hardware-approximated trigonometric function:
 
-\[
-f(x) = \sin(2x - \frac{\pi}{4}), \quad x \in [0, 2)
-\]
+f(x) = sin(2x - π/4),   for x ∈ [0, 2)
 
 ## Task I – Modeling (Octave)
 
