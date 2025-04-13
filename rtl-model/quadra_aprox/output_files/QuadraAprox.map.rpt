@@ -1,5 +1,5 @@
 Analysis & Synthesis report for QuadraAprox
-Sun Apr 13 15:51:27 2025
+Sun Apr 13 17:20:19 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,11 +13,15 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "quadra:quadra_inst"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Parameter Settings for Inferred Entity Instance: quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0
+ 11. Parameter Settings for Inferred Entity Instance: quadra:quadra_inst|lpm_mult:Mult1
+ 12. Parameter Settings for Inferred Entity Instance: quadra:quadra_inst|lpm_mult:Mult0
+ 13. lpm_mult Parameter Settings by Entity Instance
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -44,19 +48,19 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 13 15:51:27 2025          ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 13 17:20:19 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; QuadraAprox                                    ;
 ; Top-level Entity Name              ; quadra_top                                     ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 3                                              ;
-;     Total combinational functions  ; 3                                              ;
+; Total logic elements               ; 688                                            ;
+;     Total combinational functions  ; 688                                            ;
 ;     Dedicated logic registers      ; 3                                              ;
 ; Total registers                    ; 3                                              ;
 ; Total pins                         ; 52                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 12                                             ;
 ; Total PLLs                         ; 0                                              ;
 ; UFM blocks                         ; 0                                              ;
 ; ADC blocks                         ; 0                                              ;
@@ -163,21 +167,36 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
-; src/quadra.vh                    ; yes             ; User Unspecified File        ; E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.vh     ;         ;
-; src/quadra.v                     ; yes             ; User Verilog HDL File        ; E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.v      ;         ;
-; src/square.sv                    ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/square.sv     ;         ;
-; src/quadra_top.sv                ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv ;         ;
-; src/lut.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; src/quadra.sv                    ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv                   ;         ;
+; src/quadra.vh                    ; yes             ; User Unspecified File        ; E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.vh                   ;         ;
+; src/square.sv                    ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/square.sv                   ;         ;
+; src/quadra_top.sv                ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv               ;         ;
+; src/lut.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv                      ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_0os.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Intel_interview/rtl-model/quadra_aprox/db/mult_0os.tdf                 ;         ;
+; db/mult_ugs.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Intel_interview/rtl-model/quadra_aprox/db/mult_ugs.tdf                 ;         ;
+; db/mult_pgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Intel_interview/rtl-model/quadra_aprox/db/mult_pgs.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -185,17 +204,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 3           ;
+; Estimated Total logic elements              ; 688         ;
 ;                                             ;             ;
-; Total combinational functions               ; 3           ;
+; Total combinational functions               ; 688         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 0           ;
-;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 3           ;
+;     -- 4 input functions                    ; 565         ;
+;     -- 3 input functions                    ; 115         ;
+;     -- <=2 input functions                  ; 8           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 3           ;
-;     -- arithmetic mode                      ; 0           ;
+;     -- normal mode                          ; 627         ;
+;     -- arithmetic mode                      ; 61          ;
 ;                                             ;             ;
 ; Total registers                             ; 3           ;
 ;     -- Dedicated logic registers            ; 3           ;
@@ -203,23 +222,50 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; I/O pins                                    ; 52          ;
 ;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
+; Embedded Multiplier 9-bit elements          ; 12          ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; rst_b~input ;
-; Maximum fan-out                             ; 3           ;
-; Total fan-out                               ; 65          ;
-; Average fan-out                             ; 0.59        ;
+; Maximum fan-out node                        ; x[17]~input ;
+; Maximum fan-out                             ; 297         ;
+; Total fan-out                               ; 2832        ;
+; Average fan-out                             ; 3.51        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |quadra_top                ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |quadra_top         ; quadra_top  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                  ; Entity Name ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+-------------+--------------+
+; |quadra_top                           ; 688 (3)             ; 3 (3)                     ; 0           ; 0          ; 12           ; 0       ; 6         ; 52   ; 0            ; 0          ; |quadra_top                                                                          ; quadra_top  ; work         ;
+;    |lut:lut_inst|                     ; 619 (619)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |quadra_top|lut:lut_inst                                                             ; lut         ; work         ;
+;    |quadra:quadra_inst|               ; 66 (48)             ; 0 (0)                     ; 0           ; 0          ; 12           ; 0       ; 6         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst                                                       ; quadra      ; work         ;
+;       |lpm_mult:Mult0|                ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|lpm_mult:Mult0                                        ; lpm_mult    ; work         ;
+;          |mult_pgs:auto_generated|    ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|lpm_mult:Mult0|mult_pgs:auto_generated                ; mult_pgs    ; work         ;
+;       |lpm_mult:Mult1|                ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|lpm_mult:Mult1                                        ; lpm_mult    ; work         ;
+;          |mult_ugs:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|lpm_mult:Mult1|mult_ugs:auto_generated                ; mult_ugs    ; work         ;
+;       |square:sq_unit|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|square:sq_unit                                        ; square      ; work         ;
+;          |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
+;             |mult_0os:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |quadra_top|quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0|mult_0os:auto_generated ; mult_0os    ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 6           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 12          ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 2           ;
+; Mixed Sign Embedded Multipliers       ; 3           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +------------------------------------------------------+
@@ -237,13 +283,151 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "quadra:quadra_inst"                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0 ;
++------------------------------------------------+----------+---------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                  ;
++------------------------------------------------+----------+---------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                        ;
+; LPM_WIDTHA                                     ; 17       ; Untyped                               ;
+; LPM_WIDTHB                                     ; 17       ; Untyped                               ;
+; LPM_WIDTHP                                     ; 34       ; Untyped                               ;
+; LPM_WIDTHR                                     ; 34       ; Untyped                               ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                               ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                               ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                               ;
+; LATENCY                                        ; 0        ; Untyped                               ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                               ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                               ;
+; USE_EAB                                        ; OFF      ; Untyped                               ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                               ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                               ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                               ;
+; CBXI_PARAMETER                                 ; mult_0os ; Untyped                               ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                               ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                               ;
++------------------------------------------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: quadra:quadra_inst|lpm_mult:Mult1 ;
++------------------------------------------------+----------+------------------------+
+; Parameter Name                                 ; Value    ; Type                   ;
++------------------------------------------------+----------+------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE         ;
+; LPM_WIDTHA                                     ; 24       ; Untyped                ;
+; LPM_WIDTHB                                     ; 24       ; Untyped                ;
+; LPM_WIDTHP                                     ; 48       ; Untyped                ;
+; LPM_WIDTHR                                     ; 48       ; Untyped                ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                ;
+; LATENCY                                        ; 0        ; Untyped                ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                ;
+; USE_EAB                                        ; OFF      ; Untyped                ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                ;
+; CBXI_PARAMETER                                 ; mult_ugs ; Untyped                ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                ;
++------------------------------------------------+----------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: quadra:quadra_inst|lpm_mult:Mult0 ;
++------------------------------------------------+----------+------------------------+
+; Parameter Name                                 ; Value    ; Type                   ;
++------------------------------------------------+----------+------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE         ;
+; LPM_WIDTHA                                     ; 24       ; Untyped                ;
+; LPM_WIDTHB                                     ; 17       ; Untyped                ;
+; LPM_WIDTHP                                     ; 41       ; Untyped                ;
+; LPM_WIDTHR                                     ; 41       ; Untyped                ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                ;
+; LATENCY                                        ; 0        ; Untyped                ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                ;
+; USE_EAB                                        ; OFF      ; Untyped                ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                ;
+; CBXI_PARAMETER                                 ; mult_pgs ; Untyped                ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                ;
++------------------------------------------------+----------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                           ;
++---------------------------------------+--------------------------------------------------+
+; Name                                  ; Value                                            ;
++---------------------------------------+--------------------------------------------------+
+; Number of entity instances            ; 3                                                ;
+; Entity Instance                       ; quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 17                                               ;
+;     -- LPM_WIDTHB                     ; 17                                               ;
+;     -- LPM_WIDTHP                     ; 34                                               ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                               ;
+;     -- USE_EAB                        ; OFF                                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                               ;
+; Entity Instance                       ; quadra:quadra_inst|lpm_mult:Mult1                ;
+;     -- LPM_WIDTHA                     ; 24                                               ;
+;     -- LPM_WIDTHB                     ; 24                                               ;
+;     -- LPM_WIDTHP                     ; 48                                               ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                               ;
+;     -- USE_EAB                        ; OFF                                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                               ;
+; Entity Instance                       ; quadra:quadra_inst|lpm_mult:Mult0                ;
+;     -- LPM_WIDTHA                     ; 24                                               ;
+;     -- LPM_WIDTHB                     ; 17                                               ;
+;     -- LPM_WIDTHP                     ; 41                                               ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                               ;
+;     -- USE_EAB                        ; OFF                                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                               ;
++---------------------------------------+--------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -254,13 +438,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 52                          ;
 ; cycloneiii_ff         ; 3                           ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
+; cycloneiii_lcell_comb ; 688                         ;
+;     arith             ; 61                          ;
+;         3 data inputs ; 61                          ;
+;     normal            ; 627                         ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 565                         ;
+; cycloneiii_mac_mult   ; 6                           ;
+; cycloneiii_mac_out    ; 6                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.70                        ;
+; Max LUT depth         ; 8.30                        ;
+; Average LUT depth     ; 4.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -269,7 +458,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -279,86 +468,90 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Apr 13 15:51:22 2025
+    Info: Processing started: Sun Apr 13 17:20:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off QuadraAprox -c QuadraAprox
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file src/quadra.v
-    Info (12023): Found entity 1: quadra File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file src/quadra.sv
+    Info (12023): Found entity 1: quadra File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file src/square.sv
     Info (12023): Found entity 1: square File: E:/Intel_interview/rtl-model/quadra_aprox/src/square.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file src/quadra_top.sv
-    Info (12023): Found entity 1: quadra_top File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 1
+    Info (12023): Found entity 1: quadra_top File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file src/quadra_tb.sv
     Info (12023): Found entity 1: quadra_tb File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_tb.sv Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file src/lut.sv
-    Info (12023): Found entity 1: lut File: E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv Line: 3
+    Info (12023): Found entity 1: lut File: E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv Line: 4
 Info (12127): Elaborating entity "quadra_top" for the top level hierarchy
-Info (12128): Elaborating entity "lut" for hierarchy "lut:lut_inst" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 44
-Info (12128): Elaborating entity "quadra" for hierarchy "quadra:quadra_inst" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at quadra.v(27): truncated value with size 34 to match size of target (24) File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.v Line: 27
-Info (12128): Elaborating entity "square" for hierarchy "quadra:quadra_inst|square:sq_unit" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.v Line: 24
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "y[0]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[1]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[2]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[3]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[4]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[5]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[6]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[7]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[8]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[9]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[10]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[11]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[12]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[13]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[14]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[15]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[16]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[17]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[18]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[19]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[20]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[21]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[22]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
-    Warning (13410): Pin "y[23]" is stuck at GND File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 7
+Info (12128): Elaborating entity "lut" for hierarchy "lut:lut_inst" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 46
+Info (12128): Elaborating entity "quadra" for hierarchy "quadra:quadra_inst" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at quadra.sv(30): truncated value with size 34 to match size of target (24) File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+Info (12128): Elaborating entity "square" for hierarchy "quadra:quadra_inst|square:sq_unit" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 24
+Info (276014): Found 3 instances of uninferred RAM logic
+    Info (276013): RAM logic "lut:lut_inst|Ram1" is uninferred because MIF is not supported for the selected family File: E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv Line: 147
+    Info (276013): RAM logic "lut:lut_inst|Ram0" is uninferred because MIF is not supported for the selected family File: E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv Line: 14
+    Info (276013): RAM logic "lut:lut_inst|Ram2" is uninferred because MIF is not supported for the selected family File: E:/Intel_interview/rtl-model/quadra_aprox/src/lut.sv Line: 280
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "quadra:quadra_inst|square:sq_unit|Mult0" File: E:/Intel_interview/rtl-model/quadra_aprox/src/square.sv Line: 9
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "quadra:quadra_inst|Mult1" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "quadra:quadra_inst|Mult0" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+Info (12130): Elaborated megafunction instantiation "quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0" File: E:/Intel_interview/rtl-model/quadra_aprox/src/square.sv Line: 9
+Info (12133): Instantiated megafunction "quadra:quadra_inst|square:sq_unit|lpm_mult:Mult0" with the following parameter: File: E:/Intel_interview/rtl-model/quadra_aprox/src/square.sv Line: 9
+    Info (12134): Parameter "LPM_WIDTHA" = "17"
+    Info (12134): Parameter "LPM_WIDTHB" = "17"
+    Info (12134): Parameter "LPM_WIDTHP" = "34"
+    Info (12134): Parameter "LPM_WIDTHR" = "34"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0os.tdf
+    Info (12023): Found entity 1: mult_0os File: E:/Intel_interview/rtl-model/quadra_aprox/db/mult_0os.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "quadra:quadra_inst|lpm_mult:Mult1" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+Info (12133): Instantiated megafunction "quadra:quadra_inst|lpm_mult:Mult1" with the following parameter: File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+    Info (12134): Parameter "LPM_WIDTHA" = "24"
+    Info (12134): Parameter "LPM_WIDTHB" = "24"
+    Info (12134): Parameter "LPM_WIDTHP" = "48"
+    Info (12134): Parameter "LPM_WIDTHR" = "48"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_ugs.tdf
+    Info (12023): Found entity 1: mult_ugs File: E:/Intel_interview/rtl-model/quadra_aprox/db/mult_ugs.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "quadra:quadra_inst|lpm_mult:Mult0" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+Info (12133): Instantiated megafunction "quadra:quadra_inst|lpm_mult:Mult0" with the following parameter: File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra.sv Line: 30
+    Info (12134): Parameter "LPM_WIDTHA" = "24"
+    Info (12134): Parameter "LPM_WIDTHB" = "17"
+    Info (12134): Parameter "LPM_WIDTHP" = "41"
+    Info (12134): Parameter "LPM_WIDTHR" = "41"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_pgs.tdf
+    Info (12023): Found entity 1: mult_pgs File: E:/Intel_interview/rtl-model/quadra_aprox/db/mult_pgs.tdf Line: 31
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "quadra:quadra_inst|lpm_mult:Mult1|mult_ugs:auto_generated|mac_mult7" File: E:/Intel_interview/rtl-model/quadra_aprox/db/mult_ugs.tdf Line: 67
+        Warning (14320): Synthesized away node "quadra:quadra_inst|lpm_mult:Mult1|mult_ugs:auto_generated|mac_out8" File: E:/Intel_interview/rtl-model/quadra_aprox/db/mult_ugs.tdf Line: 91
+Info (13014): Ignored 54 buffer(s)
+    Info (13019): Ignored 54 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 24 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "x[0]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[1]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[2]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[3]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[4]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[5]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[6]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[7]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[8]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[9]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[10]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[11]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[12]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[13]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[14]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[15]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[16]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[17]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[18]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[19]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[20]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[21]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[22]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-    Warning (15610): No output dependent on input pin "x[23]" File: E:/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv Line: 5
-Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 752 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 27 input pins
     Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 3 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Sun Apr 13 15:51:27 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (21061): Implemented 688 logic cells
+    Info (21062): Implemented 12 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Sun Apr 13 17:20:19 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 

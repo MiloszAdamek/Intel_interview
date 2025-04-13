@@ -35,8 +35,8 @@ typedef logic [X_W-1:17] x1_t;				// [23:17]
 typedef logic [16:0] x2_t;						// [16:0]
 typedef logic signed [33:0] sq_t;			// x2_t * x2_t
 
-typedef y_t a_t;
-typedef y_t b_t;
-typedef y_t c_t;
+typedef logic signed [31:0] a_t;
+typedef logic signed [31:0] b_t;
+typedef logic signed [31:0] c_t;
 
 `endif

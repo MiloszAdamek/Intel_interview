@@ -1,3 +1,5 @@
+`include "quadra.vh"
+
 module quadra_top
 (
     input  ck_t clk,
@@ -56,7 +58,9 @@ module quadra_top
 	 
 
     // Outputs:
-    always_comb y_dv = dv_p2;
-    always_comb y    = '0;
+	always_comb begin
+		 y_dv = dv_p2;
+		 y    = y_q;
+	end
 
 endmodule
