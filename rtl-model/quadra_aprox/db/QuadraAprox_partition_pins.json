@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "y_dv",
+					"strict" : false
+				},
+				{
+					"name" : "rst_b",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "x_dv",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
