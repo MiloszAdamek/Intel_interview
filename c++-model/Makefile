@@ -26,6 +26,7 @@ CFLAGS   = -std=c++17 -fPIC -Wall
 # Gnu C++ compiler:
 CXX      = g++
 CXXFLAGS = -std=c++17 -fPIC -Wall
+CXXFLAGS += $(INCS)
 
 DEBUG = 0
 ifeq ($(DEBUG),1)
