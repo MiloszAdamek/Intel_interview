@@ -2,10 +2,10 @@
 
 rm -rf run-verilator.log
 
-set TOP_DIR = ${HOME}/prj/coding-exercise2s
+set TOP_DIR = /mnt/e/Intel_interview
 set ACT_DIR = ${TOP_DIR}/libs/ac_types/include
 set CPP_DIR = ${TOP_DIR}/c++-model
-set RTL_DIR = ${TOP_DIR}/rtl-model
+set RTL_DIR = ${TOP_DIR}/rtl-model/quadra_aprox/src
 
 echo "--------------------------------------------------------------------------------"
 echo "Compiling with 'verilator' ..."
@@ -48,11 +48,11 @@ verilator \
     +incdir+${RTL_DIR} \
     +incdir+${CPP_DIR} \
     \
-    +1800-2009ext+vs \
-    ${RTL_DIR}/quadra_top.vs \
-    ${RTL_DIR}/square.vs \
-    ${RTL_DIR}/lut.vs \
-    ${RTL_DIR}/quadra.vs
+    +1800-2009ext+sv \
+    ${RTL_DIR}/quadra_top.sv \
+    ${RTL_DIR}/square.sv \
+    ${RTL_DIR}/lut.sv \
+    ${RTL_DIR}/quadra.sv \
 
 echo "--------------------------------------------------------------------------------"
 echo "... done with 'verilator'."

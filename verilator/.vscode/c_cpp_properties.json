@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/share/verilator/include",
+                "/usr/local/share/verilator/include/vltstd",
+                "/mnt/e/Intel_interview/c++-model",
+                "/mnt/e/Intel_interview/libs/ac_types/include",
+                "${workspaceFolder}/obj_dir"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
