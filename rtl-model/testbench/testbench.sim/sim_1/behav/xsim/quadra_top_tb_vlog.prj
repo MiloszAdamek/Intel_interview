@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../testbench.srcs/sources_1/imports/src" \
+"../../../../testbench.srcs/sources_1/imports/src/lut.sv" \
+"../../../../testbench.srcs/sources_1/imports/src/quadra.sv" \
+"../../../../testbench.srcs/sources_1/imports/src/quadra_top.sv" \
+"../../../../testbench.srcs/sources_1/imports/src/square.sv" \
+"../../../../testbench.srcs/sim_1/new/quadra_top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

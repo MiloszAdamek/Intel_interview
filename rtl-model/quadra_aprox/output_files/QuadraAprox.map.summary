@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Sun Apr 13 17:20:19 2025
+Analysis & Synthesis Status : Successful - Tue Apr 15 11:58:53 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : QuadraAprox
 Top-level Entity Name : quadra_top
 Family : MAX 10
-Total logic elements : 688
-    Total combinational functions : 688
+Total logic elements : 908
+    Total combinational functions : 908
     Dedicated logic registers : 3
 Total registers : 3
 Total pins : 52
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 12
+Embedded Multiplier 9-bit elements : 14
 Total PLLs : 0
 UFM blocks : 0
 ADC blocks : 0

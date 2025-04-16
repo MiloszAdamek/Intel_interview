@@ -1,0 +1,297 @@
+
+*** Running vivado
+    with args -log quadra_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source quadra_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source quadra_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/Intel_interview/rtl-model/testbench/testbench.srcs/utils_1/imports/synth_1/square.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Intel_interview/rtl-model/testbench/testbench.srcs/utils_1/imports/synth_1/square.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top quadra_top -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11556
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/Programs/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1443.969 ; gain = 407.484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'quadra_top' [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'lut' [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:4]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:14]
+INFO: [Synth 8-226] default block is never used [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:14]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:147]
+INFO: [Synth 8-226] default block is never used [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:147]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:280]
+INFO: [Synth 8-226] default block is never used [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:280]
+INFO: [Synth 8-6155] done synthesizing module 'lut' (0#1) [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'quadra' [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'square' [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/square.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'square' (0#1) [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/square.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'quadra' (0#1) [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'quadra_top' (0#1) [E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra_top.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1534.305 ; gain = 497.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1534.305 ; gain = 497.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1534.305 ; gain = 497.820
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint E:/Intel_interview/rtl-model/testbench/testbench.srcs/utils_1/imports/synth_1/square.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1534.305 ; gain = 497.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1534.305 ; gain = 497.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1534.305 ; gain = 497.820
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   35 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	              32x34  Multipliers := 1     
+	              18x32  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP quadra_inst/bx2_long, operation Mode is: A*B.
+DSP Report: operator quadra_inst/bx2_long is absorbed into DSP quadra_inst/bx2_long.
+DSP Report: operator quadra_inst/bx2_long is absorbed into DSP quadra_inst/bx2_long.
+DSP Report: Generating DSP quadra_inst/sq_unit/sq0, operation Mode is: A*B.
+DSP Report: operator quadra_inst/sq_unit/sq0 is absorbed into DSP quadra_inst/sq_unit/sq0.
+DSP Report: Generating DSP quadra_inst/cx2sq_long, operation Mode is: A*B.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: Generating DSP quadra_inst/cx2sq_long, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: Generating DSP quadra_inst/cx2sq_long, operation Mode is: A*B.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: Generating DSP quadra_inst/cx2sq_long, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+DSP Report: operator quadra_inst/cx2sq_long is absorbed into DSP quadra_inst/cx2sq_long.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|lut         | a          | 128x29        | LUT            | 
+|lut         | b          | 128x30        | LUT            | 
+|quadra_top  | lut_inst/b | 128x30        | LUT            | 
+|quadra_top  | lut_inst/a | 128x29        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|quadra_top  | A*B            | 27     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|square      | A*B            | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | A*B            | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | (PCIN>>17)+A*B | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | (PCIN>>17)+A*B | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|quadra_top  | A*B          | 26     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|quadra_top  | PCIN>>17+A*B | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|square      | A*B          | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY8  |    19|
+|3     |DSP48E2 |     6|
+|4     |LUT1    |     1|
+|5     |LUT2    |    71|
+|6     |LUT4    |    37|
+|7     |LUT5    |    35|
+|8     |LUT6    |   193|
+|9     |MUXF7   |    31|
+|10    |FDRE    |     3|
+|11    |IBUF    |    27|
+|12    |OBUF    |    26|
++------+--------+------+
+
+Report Instance Areas: 
++------+--------------+-------+------+
+|      |Instance      |Module |Cells |
++------+--------------+-------+------+
+|1     |top           |       |   450|
+|2     |  lut_inst    |lut    |    67|
+|3     |  quadra_inst |quadra |   325|
+|4     |    sq_unit   |square |     1|
++------+--------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2345.180 ; gain = 1308.695
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2345.180 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2397.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 6 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 27 instances
+
+Synth Design complete, checksum: a2085a26
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2397.414 ; gain = 1369.027
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'E:/Intel_interview/rtl-model/testbench/testbench.runs/synth_1/quadra_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file quadra_top_utilization_synth.rpt -pb quadra_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 16 21:45:27 2025...

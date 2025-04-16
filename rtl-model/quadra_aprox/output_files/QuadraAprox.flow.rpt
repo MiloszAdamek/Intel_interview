@@ -1,5 +1,5 @@
 Flow report for QuadraAprox
-Sun Apr 13 17:20:32 2025
+Tue Apr 15 11:59:06 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,21 +41,21 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Apr 13 17:20:32 2025          ;
+; Flow Status                        ; Successful - Tue Apr 15 11:59:06 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; QuadraAprox                                    ;
 ; Top-level Entity Name              ; quadra_top                                     ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M08DAF484C8G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 689 / 8,064 ( 9 % )                            ;
-;     Total combinational functions  ; 689 / 8,064 ( 9 % )                            ;
+; Total logic elements               ; 909 / 8,064 ( 11 % )                           ;
+;     Total combinational functions  ; 909 / 8,064 ( 11 % )                           ;
 ;     Dedicated logic registers      ; 3 / 8,064 ( < 1 % )                            ;
 ; Total registers                    ; 3                                              ;
 ; Total pins                         ; 52 / 250 ( 21 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 387,072 ( 0 % )                            ;
-; Embedded Multiplier 9-bit elements ; 12 / 48 ( 25 % )                               ;
+; Embedded Multiplier 9-bit elements ; 14 / 48 ( 29 % )                               ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                                  ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                                  ;
 ; ADC blocks                         ; 0 / 1 ( 0 % )                                  ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/13/2025 17:20:11 ;
+; Start date & time ; 04/15/2025 11:58:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; QuadraAprox         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 1096488665859.174455761122488          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 1096488665859.174471112413924          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -105,12 +105,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4868 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:06     ; 1.3                     ; 6526 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.6                     ; 4962 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4868 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:06     ; 1.3                     ; 6526 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.7                     ; 4961 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4660 MB             ; 00:00:00                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:29                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

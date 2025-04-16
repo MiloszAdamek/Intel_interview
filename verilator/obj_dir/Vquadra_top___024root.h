@@ -26,11 +26,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vquadra_top___024root final : public Verilate
     CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
     CData/*0:0*/ __VactContinue;
     VL_IN(x,23,0);
-    VL_OUT(y,23,0);
+    VL_OUT(y,24,0);
     IData/*31:0*/ quadra_top__DOT__a;
     IData/*31:0*/ quadra_top__DOT__b;
     IData/*31:0*/ quadra_top__DOT__c;
-    IData/*23:0*/ quadra_top__DOT__quadra_inst__DOT__y_result;
     IData/*31:0*/ __VactIterCount;
     VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
     VlTriggerVec<1> __VstlTriggered;

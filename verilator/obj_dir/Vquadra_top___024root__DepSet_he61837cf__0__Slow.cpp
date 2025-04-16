@@ -46,7 +46,7 @@ VL_ATTR_COLD void Vquadra_top___024root___eval_settle(Vquadra_top___024root* vlS
 #ifdef VL_DEBUG
             Vquadra_top___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("/mnt/e/Intel_interview/rtl-model/quadra_aprox/src/quadra_top.sv", 3, "", "Settle region did not converge.");
+            VL_FATAL_MT("/mnt/e/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra_top.sv", 3, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -100,6 +100,13 @@ VL_ATTR_COLD void Vquadra_top___024root___stl_sequent__TOP__0(Vquadra_top___024r
     __Vtableidx2 = 0;
     CData/*6:0*/ __Vtableidx3;
     __Vtableidx3 = 0;
+    VlWide<3>/*95:0*/ __Vtemp_4;
+    VlWide<3>/*95:0*/ __Vtemp_5;
+    VlWide<3>/*95:0*/ __Vtemp_7;
+    VlWide<3>/*95:0*/ __Vtemp_8;
+    VlWide<3>/*95:0*/ __Vtemp_9;
+    VlWide<3>/*95:0*/ __Vtemp_10;
+    VlWide<3>/*95:0*/ __Vtemp_11;
     // Body
     vlSelfRef.y_dv = vlSelfRef.quadra_top__DOT__dv_p2;
     __Vtableidx1 = (0x7fU & (vlSelfRef.x >> 0x11U));
@@ -111,27 +118,44 @@ VL_ATTR_COLD void Vquadra_top___024root___stl_sequent__TOP__0(Vquadra_top___024r
     __Vtableidx3 = (0x7fU & (vlSelfRef.x >> 0x11U));
     vlSelfRef.quadra_top__DOT__c = Vquadra_top__ConstPool__TABLE_h1a1ba8e5_0
         [__Vtableidx3];
-    vlSelfRef.y = (0xffffffU & ((IData)((0x3ffffffffULL 
-                                         & VL_EXTENDS_QI(34,32, vlSelfRef.quadra_top__DOT__a))) 
-                                + ((IData)((0x3ffffffffULL 
-                                            & VL_MULS_QQQ(34, 
-                                                          (0x3ffffffffULL 
-                                                           & VL_EXTENDS_QI(34,32, vlSelfRef.quadra_top__DOT__b)), 
-                                                          (0x3ffffffffULL 
-                                                           & VL_EXTENDS_QI(34,17, 
-                                                                           (0x1ffffU 
-                                                                            & vlSelfRef.x)))))) 
-                                   + (IData)((0x3ffffffffULL 
-                                              & VL_MULS_QQQ(34, 
-                                                            (0x3ffffffffULL 
-                                                             & VL_EXTENDS_QI(34,32, vlSelfRef.quadra_top__DOT__c)), 
-                                                            (0x3ffffffffULL 
-                                                             & ((QData)((IData)(
+    VL_EXTENDS_WI(66,32, __Vtemp_4, vlSelfRef.quadra_top__DOT__c);
+    __Vtemp_5[0U] = __Vtemp_4[0U];
+    __Vtemp_5[1U] = __Vtemp_4[1U];
+    __Vtemp_5[2U] = (3U & __Vtemp_4[2U]);
+    VL_EXTENDS_WQ(66,34, __Vtemp_7, (0x3ffffffffULL 
+                                     & ((QData)((IData)(
+                                                        (0x1ffffU 
+                                                         & vlSelfRef.x))) 
+                                        * (QData)((IData)(
+                                                          (0x1ffffU 
+                                                           & vlSelfRef.x))))));
+    __Vtemp_8[0U] = __Vtemp_7[0U];
+    __Vtemp_8[1U] = __Vtemp_7[1U];
+    __Vtemp_8[2U] = (3U & __Vtemp_7[2U]);
+    VL_MULS_WWW(66, __Vtemp_9, __Vtemp_5, __Vtemp_8);
+    __Vtemp_10[0U] = __Vtemp_9[0U];
+    __Vtemp_10[1U] = __Vtemp_9[1U];
+    __Vtemp_10[2U] = (3U & __Vtemp_9[2U]);
+    VL_SHIFTRS_WWI(66,66,32, __Vtemp_11, __Vtemp_10, 0x22U);
+    vlSelfRef.y = (0x1ffffffU & (IData)((0x7ffffffffULL 
+                                         & VL_SHIFTRS_QQI(35,35,32, 
+                                                          (0x7ffffffffULL 
+                                                           & (VL_EXTENDS_QI(35,32, vlSelfRef.quadra_top__DOT__a) 
+                                                              + 
+                                                              (VL_EXTENDS_QI(35,32, (IData)(
+                                                                                (0x1ffffffffffffULL 
+                                                                                & VL_SHIFTRS_QQI(49,49,32, 
+                                                                                (0x1ffffffffffffULL 
+                                                                                & VL_MULS_QQQ(49, 
+                                                                                (0x1ffffffffffffULL 
+                                                                                & VL_EXTENDS_QI(49,32, vlSelfRef.quadra_top__DOT__b)), 
+                                                                                (0x1ffffffffffffULL 
+                                                                                & VL_EXTENDS_QI(49,18, 
                                                                                 (0x1ffffU 
-                                                                                & vlSelfRef.x))) 
-                                                                * (QData)((IData)(
-                                                                                (0x1ffffU 
-                                                                                & vlSelfRef.x)))))))))));
+                                                                                & vlSelfRef.x))))), 0x11U)))) 
+                                                               + 
+                                                               VL_EXTENDS_QI(35,32, 
+                                                                             __Vtemp_11[0U])))), 7U))));
 }
 
 VL_ATTR_COLD void Vquadra_top___024root___eval_triggers__stl(Vquadra_top___024root* vlSelf);
@@ -215,7 +239,7 @@ VL_ATTR_COLD void Vquadra_top___024root___ctor_var_reset(Vquadra_top___024root* 
     vlSelf->rst_b = VL_RAND_RESET_I(1);
     vlSelf->x = VL_RAND_RESET_I(24);
     vlSelf->x_dv = VL_RAND_RESET_I(1);
-    vlSelf->y = VL_RAND_RESET_I(24);
+    vlSelf->y = VL_RAND_RESET_I(25);
     vlSelf->y_dv = VL_RAND_RESET_I(1);
     vlSelf->quadra_top__DOT__dv_p0 = VL_RAND_RESET_I(1);
     vlSelf->quadra_top__DOT__dv_p1 = VL_RAND_RESET_I(1);
@@ -223,7 +247,6 @@ VL_ATTR_COLD void Vquadra_top___024root___ctor_var_reset(Vquadra_top___024root* 
     vlSelf->quadra_top__DOT__a = VL_RAND_RESET_I(32);
     vlSelf->quadra_top__DOT__b = VL_RAND_RESET_I(32);
     vlSelf->quadra_top__DOT__c = VL_RAND_RESET_I(32);
-    vlSelf->quadra_top__DOT__quadra_inst__DOT__y_result = VL_RAND_RESET_I(24);
     vlSelf->__Vtrigprevexpr___TOP__clk__0 = VL_RAND_RESET_I(1);
     for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = 0;

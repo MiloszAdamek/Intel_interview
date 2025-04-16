@@ -5,7 +5,7 @@ rm -rf run-verilator.log
 set TOP_DIR = /mnt/e/Intel_interview
 set ACT_DIR = ${TOP_DIR}/libs/ac_types/include
 set CPP_DIR = ${TOP_DIR}/c++-model
-set RTL_DIR = ${TOP_DIR}/rtl-model/quadra_aprox/src
+set RTL_DIR = ${TOP_DIR}/rtl-model/testbench/testbench.srcs/sources_1/imports/src
 
 echo "--------------------------------------------------------------------------------"
 echo "Compiling with 'verilator' ..."

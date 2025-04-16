@@ -1,0 +1,26 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: F:/Programs/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot quadra_top_tb_behav xil_defaultlib.quadra_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra_top.sv" Line 3. Module quadra_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv" Line 4. Module lut doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra.sv" Line 7. Module quadra doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/square.sv" Line 3. Module square doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra_top.sv" Line 3. Module quadra_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/lut.sv" Line 4. Module lut doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/quadra.sv" Line 7. Module quadra doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sources_1/imports/src/square.sv" Line 3. Module square doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_lut_sv_1065936311
+Compiling module xil_defaultlib.lut
+Compiling module xil_defaultlib.square
+Compiling module xil_defaultlib.quadra
+Compiling module xil_defaultlib.quadra_top
+Compiling module xil_defaultlib.quadra_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot quadra_top_tb_behav

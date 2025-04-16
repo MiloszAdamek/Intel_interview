@@ -27,10 +27,10 @@ C_F = 28;
 C_W = C_I + C_F; # (s4.28)
 
 
-// Convert to fixed-point
+# Convert to fixed-point
 a_q = round(a * (2^A_F));
 b_q = round(b * (2^B_F));
-c_q = round(b * (2^C_F));
+c_q = round(c * (2^C_F));
 
 A = zeros(K,1);
 B = zeros(K,1);
@@ -40,7 +40,7 @@ C = zeros(K,1);
 for k = 0 : K-1
     i = k+1; # array indexing starts at 1
     if (a_q(i) < 0)
-        A(i) = a_q(i) + (2^A_W); // Convert to Two's complement (U2)
+        A(i) = a_q(i) + (2^A_W); # Convert to Two's complement (U2)
     else
         A(i) = a_q(i);
     end

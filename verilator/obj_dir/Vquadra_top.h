@@ -34,7 +34,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vquadra_top VL_NOT_FINAL : public VerilatedMo
     VL_IN8(&x_dv,0,0);
     VL_OUT8(&y_dv,0,0);
     VL_IN(&x,23,0);
-    VL_OUT(&y,23,0);
+    VL_OUT(&y,24,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

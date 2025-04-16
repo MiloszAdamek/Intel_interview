@@ -142,7 +142,8 @@ inline void checkOutput
     dv_t    y_rtl_dv   = top->y_dv;
 
     // convert to fixed:
-    y_fxd_t y_rtl_fxd  = 0; y_rtl_fxd.set_slc(0, y_rtl_int);
+    y_fxd_t y_rtl_fxd  = 0; 
+    y_rtl_fxd.set_slc(0, y_rtl_int);
 
     // cast RTL output to double::
     double   y_rtl_dbl = y_rtl_fxd.to_double();
@@ -169,11 +170,27 @@ inline void checkOutput
     bool     match_ok   = (y_rtl_dbl == y_cpp_dbl);
 
     // Enable echoing of results:
-    bool     echo_en    = y_rtl_dv && (!in_spec || !match_ok);
+    // bool     echo_en    = y_rtl_dv && (!in_spec || !match_ok);
+    bool     echo_en = y_rtl_dv;
 
     const int SP_PREC  = 12;
     const int SP_WIDTH = SP_PREC + 8;
 
+    static bool first = true;
+    if (first) {
+        first = false;
+        std::cout << std::endl
+                  << std::setw(SP_WIDTH) << std::right << "x"
+                  << std::setw(SP_WIDTH) << std::right << "y_ref"
+                  << std::setw(SP_WIDTH) << std::right << "y_cpp"
+                  << std::setw(SP_WIDTH) << std::right << "cpp_err"
+                  << std::setw(SP_WIDTH) << std::right << "y_rtl"
+                  << std::setw(SP_WIDTH) << std::right << "rtl_err"
+                  << std::endl;
+    }
+    
+    
+    
     if (echo_en)
     {
         cout << "  ";
@@ -200,7 +217,7 @@ void testQuadra
     using namespace std;
 
     // Test params:
-//  uint32_t x_start = 0x000000; // 0.0
+    // uint32_t x_start = 0x000000; // 0.0
     uint32_t x_start = 0xfffff0;
     uint32_t x_stop  = 0xffffff; // 1.999...
     uint32_t x_step  = 0x000001; // exhaustive test

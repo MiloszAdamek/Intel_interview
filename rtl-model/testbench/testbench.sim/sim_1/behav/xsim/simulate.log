@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Started quadra_tb ...
+x = 0x007fffff
+y = 0x00001e95f61
+Simulation finished.
+$finish called at time : 22500 ps : File "E:/Intel_interview/rtl-model/testbench/testbench.srcs/sim_1/new/quadra_top_tb.v" Line 96
